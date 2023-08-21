@@ -1,0 +1,38 @@
+.Personnage{
+    h2{
+        text-align: center;
+        color: #992627;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+}
+.character-card{
+    span{
+        color: #992627;
+    }
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: solid 2px black;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 1rem;
+color: whitesmoke;
+display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    textarea{
+        resize: none;
+    }
+    .field{
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+    }
+    .container{
+        display: flex;
+        flex-direction: row;
+        .field{
+            display: flex;
+            align-items: center;
+        }
+    }
+
+}
