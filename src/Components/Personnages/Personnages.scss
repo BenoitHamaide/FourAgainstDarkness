@@ -5,13 +5,20 @@
         font-family: Georgia, 'Times New Roman', Times, serif;
     }
 }
+
 .character-card{
+    background-color: rgba(255, 255, 255, 0.074);
+    border: 1px solid rgba(255, 255, 255, 0.222);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border-radius: .7rem;
+    transition: all ease .3s;
     span{
         color: #992627;
     }
     font-family: Georgia, 'Times New Roman', Times, serif;
-    border: solid 2px black;
-    border-radius: 5px;
+    
+    border-radius: 15px;
     padding: 1rem;
     margin: 1rem;
 color: whitesmoke;
@@ -24,7 +31,7 @@ display: flex;
     .field{
         display: flex;
         flex-direction: column;
-        width: 60%;
+        width: 90%;
     }
     .container{
         display: flex;
@@ -34,5 +41,143 @@ display: flex;
             align-items: center;
         }
     }
-
+.position, .niveau, .lanterne, .bandage, .attaque, .defense, .vie, .tresors, .indices{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%; /* La moitié de la hauteur pour obtenir une forme ronde */
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: center;
+    font-weight: bolder;
+    margin-bottom: 1rem;
 }
+}
+.entete, .badge{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+   
+    .field{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+   
+} 
+.sort, .status{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+.container{
+        margin-bottom: 1rem;
+    }
+.input {
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    padding: 1em;
+    background-color: #ccc;
+    box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
+    transition: 300ms ease-in-out;
+  }
+  
+  .input:focus {
+    background-color: white;
+    transform: scale(1.05);
+    box-shadow: 10px 10px 60px #969696,
+               -10px -10px 60px #ffffff;
+  }
+
+  /****essai*/
+  .input1-div {
+    
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid #e71c20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    box-shadow: 0px 0px 100px #e71c20 , inset 0px 0px 10px #e71c20,0px 0px 5px #ccc;;
+    animation: flicker 1.7s linear infinite;
+  }
+
+  
+  .input1 {
+    position: absolute;
+    border-radius: 50%;
+    border: transparent;
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    color: black;
+    font-weight: bold;
+  }
+  
+  @keyframes flicker {
+    0% {
+      border: 2px solid #e71c20;
+      box-shadow: 0px 0px 100px #e71c20 , inset 0px 0px 10px #e71c20,0px 0px 5px #ccc;;
+    }
+  
+    5% {
+      border: none;
+      box-shadow: none;
+    }
+  
+    10% {
+      border: 2px solid #e71c20 ;
+      box-shadow: 0px 0px 100px #e71c20  , inset 0px 0px 10px rgb#e71c20 ,0px 0px 5px #ccc;;
+    }
+  
+    25% {
+      border: none;
+      box-shadow: none;
+    }
+  
+    30% {
+      border: 2px solid #e71c20 ;
+      box-shadow: 0px 0px 100px #e71c20 , inset 0px 0px 10px #e71c20 ,0px 0px 5px #ccc;;
+    }
+  
+    100% {
+      border: 2px solid #e71c20;
+      box-shadow: 0px 0px 100px #e71c20 , inset 0px 0px 10px #e71c20 ,0px 0px 5px #ccc;;
+    }
+  }
+  
+  @keyframes iconflicker {
+    0% {
+      opacity: 1;
+    }
+  
+    5% {
+      opacity: 0.2;
+    }
+  
+    10% {
+      opacity: 1;
+    }
+  
+    25% {
+      opacity: 0.2;
+    }
+  
+    30% {
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+  @media (min-width: 768px) {
+    .character-container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;}
+  }

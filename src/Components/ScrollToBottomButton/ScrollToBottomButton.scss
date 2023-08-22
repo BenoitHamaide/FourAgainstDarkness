@@ -1,4 +1,5 @@
 .scroll-to-bottom-button {
+  z-index: 1;
     position: fixed;
     top: 30px;
     right: 10px;
@@ -23,7 +24,7 @@
     outline: none; 
   
     &:active {
-      background: #f24620 
+      background: #992627
   }
 }
   
